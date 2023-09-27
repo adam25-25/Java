@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Gemsa 2P</title>
+<script language="JavaScript">
+document.write("Szkielet zaliczeniowy JavaScript Adam Gemsa 2P".fontcolor("red").fontsize(10)+"<br>");
+function WinOpen_z3_gemsa()
+{
+window.open("z3_gem.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+}
+function WinOpen_z4_gemsa()
+{
+window.open("z4_gem.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=380,width=1000,top=200,left=200");
+}
+function WinOpen_z5_gemsa()
+{
+window.open("z5_gem.html","okienko_z5","toolbar=no,directories=no,menubar=no,height=270,width=800,top=200,left=280");
+}
+function okno_zamknij_gemsa()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button_z3" name="zadanie3" value="zadanie3-Gemsa" onclick="WinOpen_z3_gemsa(' ')">
+<input type="button_z4" name="zadanie4" value="zadanie4-Gemsa" onclick="WinOpen_z4_gemsa(' ')">
+<input type="button_z5" name="zadanie5" value="zadanie5-Gemsa" onclick="WinOpen_z5_gemsa(' ')">
+<input type="button" value="zamknij okno" onclick="okno_zamknij_gemsa()"/>
+</form>
+</body>
+</html>
