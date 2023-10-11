@@ -1,0 +1,24 @@
+<html>
+<head>
+	<div style="color:green;font-size:33px;">
+	<script language="JavaScript">
+	var D1_gem=prompt("D1_gem=","");
+	var G1_gem=prompt("G1_gem=","");
+	var D2_gem=prompt("D2_gem=","");
+	var G2_gem=prompt("G2_gem=","");
+	var Ilosc_sekund;
+	var ilosc_sekund_godzin;
+	var a=parseFloat(D1_gem);
+	var b=parseFloat(G1_gem);
+	var c=parseFloat(D2_gem);
+	var d=parseFloat(G2_gem);	
+	Ilosc_sekund=(a-c)*86400;
+	ilosc_sekund_godzin=(b-d)*3600;
+	ogolna_ilosc=Ilosc_sekund+ilosc_sekund_godzin;
+	document.write("Ilość sekund="+a+" + "+c+"*86400 = "+Ilosc_sekund+"+"+ilosc_sekund_godzin+"="+ogolna_ilosc+"<br>");
+	</script>
+	</div>
+</head>
+<body>
+</body>
+</html>

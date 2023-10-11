@@ -1,0 +1,29 @@
+<html>
+<head>
+	<div style="color: navy; font-size: 26px">
+	<script language="JavaScript">
+	var A_gem=prompt("Podaj pierwszą liczbę     A=","");
+	var B_gem=prompt("Podaj drugą liczbę        B=","");
+	var A=parseFloat(A_gem);
+	var B=parseFloat(B_gem);
+	
+	var a;
+	var ab1;
+	var ab2;
+	var b;
+	var a1;
+	
+	a=(A*A*A);
+	ab1=3*((A*A)*B);
+	ab2=3*(A*(B*B));
+	b=(B*B*B);
+	a1=a+ab1+ab2+b;
+	
+	document.write("Wczytane liczby: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A="+A+" &nbsp;&nbsp;&nbsp; B="+B+"<br>");
+	document.write("("+A+" + "+B+")^3="+A+"^3 + 3*(("+A+")^2)*("+B+") + 3*("+A+")*(("+B+")^2) + "+B+"^3 = "+a+" + "+ab1+" + "+ab2+" + "+b+" = "+a1+"".fontcolor("red"));
+	</script>
+	</div>
+</head>
+<body>
+</body>
+</html>

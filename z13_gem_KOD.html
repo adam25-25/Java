@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gemsa()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea name="gemsa" cols="80" rows="16" readonly>
+<html>
+<head>
+	<div>
+	<script language="JavaScript">
+	var M1_gem=prompt("M1_gem=","");
+	var dzielnik1a;
+	var dzielnikb;
+	var a=parseFloat(M1_gem);
+	dzielnika=(a+1);
+	dzielnikb=a*(a+1);
+	document.write("1/"+a+" = 1/"+dzielnika+" + 1/"+dzielnikb+"<br>");
+	</script>
+	</div>
+</head>
+<body>
+</body>
+</html>
+</textarea>
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_gemsa()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
