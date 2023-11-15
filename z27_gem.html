@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>
+Obliczanie katu startu samolotu i jego wysokosci nad Dawidem
+</title>
+<script language="JavaScript">
+function Kat_gemsa(odl_gem,s_gem)
+{
+odl=parseFloat(odl_gem)
+s=parseFloat(s_gem)
+
+tanges=odl/s;
+radiany_gem=Math.atan(tanges);
+Kat_wynik=(radiany_gem*180)/Math.PI;
+
+document.getElementsByName('kat')[0].value=Kat_wynik.toFixed(2); /* na dokument */
+wyprowadz_kat_gem.innerHTML="Kat= "+Kat_wynik.toFixed(2)+"stopni"+"<br>"; /* do tabeli */
+}
+function H_gemsa(odl_gem,s_gem)
+{
+odl=parseFloat(odl_gem)
+s=parseFloat(s_gem)
+
+H_wynik=Math.sqrt(Math.pow(s,2)-Math.pow(odl,2));
+
+document.getElementsByName('h')[0].value=H_wynik.toFixed(2);
+wyprowadz_h_gem.innerHTML="Wysokosc= "+H_wynik.toFixed(2)+"j";
+}
+</script>
+</head>
+<body>
+Obliczanie katu startu samolotu i jego wysokosci nad Dawidem
+<br> <br>
+<form name="formularz" action="..." onsubmit="Kat_gemsa(this.ODL_gem.value,this.S_gem.value); H_gemsa(this.ODL_gem.value,this.S_gem.value);return false">
+Podaj odleglosc miedzy Arturem, a Dawidem=
+<input size="6" name="ODL_gem">
+Podaj przebyta droge przez samolot bedacy pionowo nad Dawidem=
+<input size="6" name="S_gem">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Kat startu samolotu=
+<input size="6" name="kat">
+Wysokosc samolotu nad Dawidem w linii prostej=
+<input size="6" name="h">
+</form>
+<table>
+<tr id="wyprowadz_kat_gem"></tr>
+<tr id="wyprowadz_h_gem"></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gemsa()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea name="gemsa" cols="80" rows="16" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function Pole_gemsa()
+{
+var a_gem= parseFloat(document.getElementById('dlugosc').value);
+var b_gem= a_gem*a_gem;
+document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_gem.toFixed(2)+" cm^2";
+}
+function obwod_gemsa()
+{
+var a_gem= parseFloat(document.getElementById('dlugosc').value);
+var b_gem= 4*a_gem;
+document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_gem.toFixed(2)+" cm";
+}
+</script>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="Pole_gemsa()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_gemsa()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+</textarea>
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_gemsa()"/>
+</body>
+</html>

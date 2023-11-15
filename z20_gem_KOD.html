@@ -1,0 +1,67 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gemsa()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea name="gemsa" cols="80" rows="16" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function AB_gem()
+{
+var xa_gem= parseFloat(document.getElementById('xa').value);
+var ya_gem= parseFloat(document.getElementById('ya').value);
+var xb_gem= parseFloat(document.getElementById('xb').value);
+var yb_gem= parseFloat(document.getElementById('yb').value);
+var AB;
+AB=Math.sqrt(Math.pow(xa_gem-xb_gem,2)+Math.pow(ya_gem-yb_gem,2));
+document.getElementById("nazwa").innerHTML ="Dlugosc boku AB= "+AB.toFixed(2)+" cm";
+}
+function BC_gem()
+{
+var xb_gem= parseFloat(document.getElementById('xb').value);
+var yb_gem= parseFloat(document.getElementById('yb').value);
+var xc_gem= parseFloat(document.getElementById('xc').value);
+var yc_gem= parseFloat(document.getElementById('yc').value);
+var BC;
+BC=Math.sqrt(Math.pow(xb_gem-xc_gem,2)+Math.pow(yb_gem-yc_gem,2));
+document.getElementById("nazwa").innerHTML ="Dlugosc boku BC= "+BC.toFixed(2)+" cm";
+}
+function AC_gem()
+{
+var xa_gem= parseFloat(document.getElementById('xa').value);
+var ya_gem= parseFloat(document.getElementById('ya').value);
+var xc_gem= parseFloat(document.getElementById('xc').value);
+var yc_gem= parseFloat(document.getElementById('yc').value);
+var AC;
+AC=Math.sqrt(Math.pow(xa_gem-xc_gem,2)+Math.pow(ya_gem-yc_gem,2));
+document.getElementById("nazwa").innerHTML ="Dlugosc boku AC="+AC.toFixed(2)+" cm";
+}
+</script>
+<h1>Wszystko o bokach w TRÓJKĄCIE</h1><br><br>
+Podaj współrzędną x punktu A: <input type="text" id="xa" value=""><br><br><br>
+Podaj współrzędną y punktu A: <input type="text" id="ya" value=""><br><br><br>
+Podaj współrzędną x punktu B: <input type="text" id="xb" value=""><br><br><br>
+Podaj współrzędną y punktu B: <input type="text" id="yb" value=""><br><br><br>
+Podaj współrzędną x punktu C: <input type="text" id="xc" value=""><br><br><br>
+Podaj współrzędną y punktu C: <input type="text" id="yc" value=""><br><br><br>
+<input type="button" name="AB" value="Oblicz dlugosc boku AB" Onclick="AB_gem()"><br><br>
+<input type="button" name="BC" value="Oblicz dlugosc boku BC" Onclick="BC_gem()"><br><br>
+<input type="button" name="AC" value="Oblicz Dlugosc boku AC" Onclick="AC_gem()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+</textarea>
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_gemsa()"/>
+</body>
+</html>

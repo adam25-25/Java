@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body style="background-color: silver;">
+<div style="color: blue; font-size: 50px;">
+<script language="JavaScript">
+var x1=prompt("Podaj x1= ","");
+var x1_gem=parseFloat(x1);
+var x2=prompt("Podaj x2= ","");
+var x2_gem=parseFloat(x2);
+
+var rad=(x1_gem*Math.PI)/180;
+var y1=3*Math.pow(x1_gem,(4/6));
+var y2=2*Math.cos(rad)+3*Math.sin(rad);
+var y3=Math.cbrt(Math.pow(x1_gem,5)+2*Math.pow(x2_gem,4))*Math.abs(x1_gem-x2_gem);
+
+document.write("x1 = "+x1+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2 = "+x2+"<br>");
+document.write("x1 = "+x1+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1 = "+rad.toFixed(2)+"<br>");
+document.write("y1 = "+y1.toFixed(2)+"<br>");
+document.write("y2 = "+y2.toFixed(2)+"<br>");
+document.write("y3 = "+y3.toFixed(2)+"<br>");
+
+</script>
+</div>
+</body>
+</html>

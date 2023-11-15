@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gemsa()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea name="gemsa" cols="80" rows="16" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div style="color: blue;">
+<script language="JavaScript">
+var No=prompt("Podaj No= ","");
+var No_gem=parseFloat(No);
+var t=prompt("Podaj t= ","");
+var t_gem=parseFloat(t);
+var T1=prompt("Podaj T1= ","");
+var T1_gem=parseFloat(T1);
+
+var Lambda=Math.log(2)/T1_gem;
+var N=No*Math.pow(Math.E,(-Lambda*t));
+
+document.write("N0 = "+No_gem+"[sztuk] <br>");
+document.write("t = "+t_gem+"[lat] <br>");
+document.write("T1/2 = "+T1_gem+"[lat] <br>");
+document.write("Lambda = "+Lambda.toFixed(7)+"[1/rok] <br>");
+document.write("N = "+N.toFixed(7)+"[sztuk] <br>");
+
+</script>
+</div>
+</body>
+</html>
+</textarea>
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_gemsa()"/>
+</body>
+</html>

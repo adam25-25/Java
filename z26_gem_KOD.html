@@ -1,0 +1,79 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gemsa()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea name="gemsa" cols="80" rows="16" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>
+Przykład obliczania Pola i obwodu trapezu rownoramiennego.
+</title>
+<script language="JavaScript">
+function Pow_gemsa(a_gem,b_gem,h_gem)
+{
+a=parseFloat(a_gem)
+b=parseFloat(b_gem)
+h=parseFloat(h_gem)
+
+dluzszapodstawa=Math.abs(a-b);
+krotszapodstawa=Math.abs(b-a);
+podstawatrojkatow=(dluzszapodstawa-krotszapodstawa)/2;
+ramie=Math.sqrt(Math.pow(h,2)+Math.pow(podstawatrojkatow,2));
+Pole_wynik=((a+b)*h)/2;
+
+document.getElementsByName('pole')[0].value=Pole_wynik.toFixed(2); /* na dokument */
+wyprowadz_pole_gem.innerHTML="Pole="+Pole_wynik.toFixed(2)+"j^2"+"<br>"; /* do tabeli */
+}
+function Obw_gemsa(a_gem,b_gem,h_gem)
+{
+a=parseFloat(a_gem)
+b=parseFloat(b_gem)
+h=parseFloat(h_gem)
+
+dluzszapodstawa=Math.abs(a-b);
+krotszapodstawa=Math.abs(b-a);
+podstawatrojkatow=(dluzszapodstawa-krotszapodstawa)/2;
+ramie=Math.sqrt(Math.pow(h,2)+Math.pow(podstawatrojkatow,2));
+Obw_wynik=a+b+ramie*2;
+
+document.getElementsByName('obw')[0].value=Obw_wynik.toFixed(2);
+wyprowadz_obw_gem.innerHTML="Obwod="+Obw_wynik.toFixed(2)+"j";
+}
+</script>
+</head>
+<body>
+Obliczanie Pola i obwodu trapezu rownoramiennego.
+<br> <br>
+<form name="formularz" action="..." onsubmit="Pow_gemsa(this.A_gem.value,this.B_gem.value,this.H_gem.value); Obw_gemsa(this.A_gem.value,this.B_gem.value,this.H_gem.value);return false">
+Podaj podstawe trapezu a=
+<input size="6" name="A_gem">
+Podaj podstawe trapezu b=
+<input size="6" name="B_gem">
+Podaj wysokosc trapezu=
+<input size="6" name="H_gem">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Pole trapezu=
+<input size="6" name="pole">
+Obwod trapezu=
+<input size="6" name="obw">
+</form>
+<table>
+<tr id="wyprowadz_pole_gem"></tr>
+<tr id="wyprowadz_obw_gem"></tr>
+</table>
+</body>
+</html>
+</textarea>
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_gemsa()"/>
+</body>
+</html>
