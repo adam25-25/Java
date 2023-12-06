@@ -1,0 +1,55 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gemsa()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea name="gemsa" cols="80" rows="16" readonly>
+<html>
+<head>
+<script type="text/javascript">
+function monitor(marka_g,kolor_g,Hz_g,Proporcje_g)//początek konstruktora
+{
+this.marka=marka_g;
+this.kolor=kolor_g;
+this.Hz=Hz_g;
+this.Proporcje=Proporcje_g;
+}//koniec konstruktora
+monitor.prototype.monitor_pokaz_gemsa = function () //definicja metody
+{
+alert(this.marka + ' ' + this.kolor + ' ' + this.Hz + ' ' + this.Proporcje);
+};
+var monitor1 = new monitor("Asus", "Czarny", "144Hz","16:9"); // nowy obiekt monitor1
+var monitor2 = new monitor('LG', 'Szary', '60Hz','16:9');
+var monitor3 = new monitor('MSI', 'Czarny', '75Hz','16:9');
+
+monitor1.monitor_pokaz_gemsa(); // uruchomienie metody monitor_pokaz_gemsa() dotyczącej monitor 1
+monitor.stan='dobry';
+monitor.monitor_wyswietl_gemsa=function() {alert('Stan: ' + this.stan)}
+monitor.monitor_wyswietl_gemsa();
+monitor2.monitor_pokaz_gemsa();
+monitor.monitor_wyswietl_gemsa();
+monitor3.monitor_pokaz_gemsa();
+monitor.monitor_wyswietl_gemsa();
+
+document.write("dostęp do właściwości"+"<br>");
+// poniżej dostęp do pól monitor1
+document.write("pierwszy monitor"+" "+monitor1.marka+" "+monitor1.kolor+" "+monitor1.Hz+" "+monitor.stan+"<br>");
+document.write("drugi monitor"+" "+monitor2.marka+" "+monitor2.kolor+" "+monitor2.Hz+" "+monitor.stan+"<br>");
+document.write("trzeci monitor"+" "+monitor3.marka+" "+monitor3.kolor+" "+monitor3.Hz+" "+monitor.stan+"<br>");
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe
+</body>
+</html>
+</textarea>
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_gemsa()"/>
+</body>
+</html>

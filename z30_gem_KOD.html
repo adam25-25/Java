@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gemsa()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea name="gemsa" cols="80" rows="16" readonly>
+<html>
+<head>
+<script type="text/javascript">
+var monitor = {
+marka: 'Asus',
+kolor: 'Czarny',
+Hz: '144Hz',
+monitor_wyswietl_gemsa: function ()
+{
+document.write(this.marka + ' ' + this.kolor + ' ' + this.Hz)
+}
+}
+monitor.monitor_wyswietl_gemsa();
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe
+</body>
+</html>
+</textarea>
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_gemsa()"/>
+</body>
+</html>
